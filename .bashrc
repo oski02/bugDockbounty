@@ -7,7 +7,7 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias ls='ls --color=auto'
 source /etc/profile.d/bash_completion.sh
-export PS1="\[\e[31m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\h\[\e[m\] \[\e[38;5;214m\]\W\[\e[m\]\[\e[31m\]]\[\e[m\]\\$ "
+export PS1="\[\e[31m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\\[\e[m\] \[\e[38;5;214m\]\W\[\e[m\]\[\e[31m\]]\[\e[m\]\\$ "
 
 
 # by nahamsec: https://raw.githubusercontent.com/nahamsec/recon_profile/master/.bash_profile
