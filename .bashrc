@@ -11,6 +11,7 @@ export PS1="\[\e[31m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\h\[\e
 
 
 # by nahamsec: https://raw.githubusercontent.com/nahamsec/recon_profile/master/.bash_profile
+# modified by "x25 aka oski02"
 #----- AWS -------
 
 s3ls(){
@@ -27,6 +28,11 @@ curl -s $1 | grep path | sed -n "s/.*resource path=\"\(.*\)\".*/\1/p" | tee -a ~
 }
 
 #----- recon -----
+
+paramspider(){
+python3 ~/tools/ParamSpider/paramspider.py 
+}
+
 crtndstry(){
 ./tools/crtndstry/crtndstry $1
 }
