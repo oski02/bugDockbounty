@@ -31,7 +31,7 @@ curl -s $1 | grep path | sed -n "s/.*resource path=\"\(.*\)\".*/\1/p" | tee -a ~
 
 paramspider(){
 cd ~/tools/ParamSpider/
-python3 ~/tools/ParamSpider/paramspider.py 
+python3 paramspider.py 
 }
 
 
