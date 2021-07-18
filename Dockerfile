@@ -51,21 +51,11 @@ RUN wget --quiet https://github.com/michenriksen/aquatone/releases/download/v1.7
 RUN wget --quiet https://github.com/maurosoria/dirsearch/archive/master.zip -O dirsearch.zip && unzip dirsearch.zip 
 RUN git clone https://github.com/bonino97/new-zile.git && pip3 install termcolor 
 RUN git clone https://github.com/GerbenJavado/LinkFinder.git && pip3 install -r LinkFinder/requirements.txt; python3 LinkFinder/setup.py install; pip install -r LinkFinder/requirements.txt; python LinkFinder/setup.py install
-RUN git clone https://github.com/devanshbatham/ParamSpider && pip3 install -r ParamSpider/requirements.txt 
 RUN git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
 RUN git clone https://github.com/tomnomnom/meg.git meg1
+RUN git clone https://github.com/tomnomnom/gf.git gf1; mkdir ~/.gf ; cp -r gf1/examples ~/.gf/
+RUN git clone https://github.com/devanshbatham/ParamSpider && pip3 install -r ParamSpider/requirements.txt ; cp -r ParamSpider/gf_profiles/* ~/.gf/
 
-RUN echo '
-alias update='apk update && apk upgrade'
-export HISTTIMEFORMAT="%d/%m/%y %T "
-export PS1='\u@\h:\W \$ '
-alias l='ls -CF'
-alias la='ls -A'
-alias ll='ls -alF'
-alias ls='ls --color=auto'
-source /etc/profile.d/bash_completion.sh
-export PS1="\[\e[31m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\h\[\e[m\] \[\e[38;5;214m\]\W\[\e[m\]\[\e[31m\]]\[\e[m\]\\$ "
-' >> ~/.bashrc
 
 RUN ln -s /go/bin/dalfox /usr/bin/dalfox; \
     ln -s /go/bin/ffuf   /usr/bin/ffuf; \
