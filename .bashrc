@@ -9,7 +9,6 @@ source /etc/profile.d/bash_completion.sh
 export PS1="\[\e[31m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\h\[\e[m\] \[\e[38;5;214m\]\W\[\e[m\]\[\e[31m\]]\[\e[m\]\\$ "
 
 
-
 # by nahamsec: https://raw.githubusercontent.com/nahamsec/recon_profile/master/.bash_profile
 # modified by "x25 aka oski02"
 
@@ -29,6 +28,12 @@ curl -s $1 | grep path | sed -n "s/.*resource path=\"\(.*\)\".*/\1/p" | tee -a ~
 }
 
 #----- recon -----
+
+paramspider(){
+python3 ~/tools/ParamSpider/paramspider.py 
+}
+
+
 crtndstry(){
 ./tools/crtndstry/crtndstry $1
 }
@@ -80,10 +85,6 @@ crtshdirsearch(){ #gets all domains from crtsh, runs httprobe and then dir brute
 curl -s https://crt.sh/?q\=%.$1\&output\=json | jq -r '.[].name_value' | sed 's/\*\.//g' | sort -u | httprobe -c 50 | grep https | xargs -n1 -I{} python3 ~/tools/dirsearch/dirsearch.py -u {} -e $2 -t 50 -b 
 }
 
-
-paramspider(){
-python3 ~/tools/ParamSpider/paramspider.py 
-}
 
 
 
