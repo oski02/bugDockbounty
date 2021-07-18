@@ -41,7 +41,7 @@ WORKDIR /go/bin
 RUN cd /go/bin                                                                                                                                         
                                                                                                                                                        
                                                                                                                                                        
-RUN wget --quiet https://raw.githubusercontent.com/nahamsec/recon_profile/master/.bash_profile -O ~/.bashrc                                            
+RUN wget --quiet https://raw.githubusercontent.com/oski02/bugDockbounty/main/.bashrc -O ~/.bashrc                             
 RUN wget --quiet https://github.com/Edu4rdSHL/findomain/releases/download/1.5.0/findomain-linux -O findomain;chmod +x findomain
 RUN wget --quiet https://github.com/OWASP/Amass/releases/download/v3.13.2/amass_linux_amd64.zip \
     -O amass1.zip && unzip amass1.zip -d amass1 && rm amass1.zip &&  chmod +x /go/bin/amass1/amass_linux_amd64/amass && \
