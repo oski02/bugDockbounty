@@ -10,7 +10,7 @@ export PS1="\[\e[31m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\h\[\e
 
 
 
-
+# by nahamsec: https://raw.githubusercontent.com/nahamsec/recon_profile/master/.bash_profile
 #----- AWS -------
 
 s3ls(){
