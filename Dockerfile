@@ -33,7 +33,7 @@ RUN go get -v github.com/hahwul/dalfox/v2
 RUN go get -u github.com/tomnomnom/gf                                                                                                                  
 RUN go get -u -v github.com/lc/gau                                                                                                                     
 RUN GO111MODULE=on go get -u github.com/jaeles-project/gospider                                                                                        
-RUN go get -v github.com/OWASP/Amass/v3/...                                                                                                            
+RUN go get -v github.com/OWASP/Amass/v3/...   
 RUN go get -u github.com/tomnomnom/meg                                                                                                                 
 RUN go get software.sslmate.com/src/certspotter/cmd/certspotter                                                                                        
 RUN go get -u github.com/tomnomnom/anew                                                                                                                
@@ -44,9 +44,6 @@ RUN cd /go/bin
                                                                                                                                                        
 RUN wget --quiet https://raw.githubusercontent.com/oski02/bugDockbounty/main/.bashrc -O ~/.bashrc                             
 RUN wget --quiet https://github.com/Edu4rdSHL/findomain/releases/download/1.5.0/findomain-linux -O findomain;chmod +x findomain
-RUN wget --quiet https://github.com/OWASP/Amass/releases/download/v3.13.2/amass_linux_amd64.zip \
-    -O amass1.zip && unzip amass1.zip -d amass1 && rm amass1.zip &&  chmod +x /go/bin/amass1/amass_linux_amd64/amass && \
-     mv /go/bin/amass1/amass_linux_amd64/amass /go/bin/amass 
 RUN wget --quiet https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip -O aquatone.zip && \
     unzip aquatone.zip && rm aquatone.zip 
 RUN wget --quiet https://github.com/maurosoria/dirsearch/archive/master.zip -O dirsearch.zip && unzip dirsearch.zip  && rm dirsearch.zip && \
@@ -75,7 +72,7 @@ RUN ln -s /go/bin/dalfox /usr/bin/dalfox; \
     ln -s /go/bin/meg /usr/bin/meg; \
     ln -s /go/bin/certspotter /usr/bin/certspotter; \
     ln -s /go/bin/anew /usr/bin/anew
-
+RUN rm /go/bin/README.md /go/bin/LICENSE.txt
 RUN git clone https://github.com/danielmiessler/SecLists.git
 RUN ln -s /go/bin/ ~/tools
 
