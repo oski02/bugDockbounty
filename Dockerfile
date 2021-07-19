@@ -48,8 +48,8 @@ RUN wget --quiet https://github.com/OWASP/Amass/releases/download/v3.13.2/amass_
     -O amass1.zip && unzip amass1.zip -d amass1 && rm amass1.zip &&  chmod +x /go/bin/amass1/amass_linux_amd64/amass && \
      mv /go/bin/amass1/amass_linux_amd64/amass /go/bin/amass 
 RUN wget --quiet https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip -O aquatone.zip && \
-    unzip aquatone.zip && rm aquatone.zip  
-RUN wget --quiet https://github.com/maurosoria/dirsearch/archive/master.zip -O dirsearch.zip && unzip dirsearch.zip 
+    unzip aquatone.zip && rm aquatone.zip && rm README.md LICENSE.txt
+RUN wget --quiet https://github.com/maurosoria/dirsearch/archive/master.zip -O dirsearch.zip && unzip dirsearch.zip && rm dirsearch.zip
 RUN git clone https://github.com/bonino97/new-zile.git && pip3 install termcolor 
 RUN git clone https://github.com/GerbenJavado/LinkFinder.git && pip3 install -r LinkFinder/requirements.txt; python3 LinkFinder/setup.py install; pip install -r LinkFinder/requirements.txt; python LinkFinder/setup.py install
 RUN git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap
