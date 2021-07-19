@@ -77,6 +77,8 @@ RUN ln -s /go/bin/dalfox /usr/bin/dalfox; \
     ln -s /go/bin/anew /usr/bin/anew
 
 RUN git clone https://github.com/danielmiessler/SecLists.git
+RUN ln -s /go/bin/ ~/tools
+
 
 RUN bash
 CMD "/bin/bash"
