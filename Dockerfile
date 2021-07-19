@@ -67,12 +67,10 @@ RUN ln -s /go/bin/dalfox /usr/bin/dalfox; \
     ln -s /go/bin/assetfinder /usr/bin/assetfinder; \
     ln -s /go/bin/findomain /usr/bin/findomain; \ 
     ln -s /go/bin/amass /usr/bin/amass; \
-    ln -s /go/bin/findomain /usr/bin/findomain; \
     ln -s /go/bin/gau /usr/bin/gau; \
     ln -s /go/bin/subfinder /usr/bin/subfinder; \
     ln -s /go/bin/dirsearch/dirsearch.py /usr/bin/dirsearch.py; \
     ln -s /go/bin/gospider /usr/bin/gospider; \
-    ln -s /go/bin/amass /usr/bin/amass; \
     ln -s /go/bin/sqlmap-dev/sqlmap.py /usr/bin/sqlmap.py; \
     ln -s /go/bin/meg /usr/bin/meg; \
     ln -s /go/bin/certspotter /usr/bin/certspotter; \
