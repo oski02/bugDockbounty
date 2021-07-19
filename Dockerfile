@@ -14,7 +14,8 @@ RUN apk add --no-cache py3-pip
 RUN apk add --no-cache gcc                                                                                                                             
 RUN apk add --no-cache py3-cryptography                                                                                                                
 RUN apk add --no-cache py3-setuptools                                                                                                                  
-RUN apk add --no-cache py2-setuptools                                                                                                                  
+RUN apk add --no-cache py2-setuptools 
+RUN apk add --no-cache vim
                                                                                                                                                        
                                                                                                                                                        
 RUN go get -u github.com/tomnomnom/assetfinder                                                                                                         
