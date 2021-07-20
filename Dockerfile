@@ -36,7 +36,10 @@ RUN GO111MODULE=on go get -u github.com/jaeles-project/gospider
 RUN go get -v github.com/OWASP/Amass/v3/...   
 RUN go get -u github.com/tomnomnom/meg                                                                                                                 
 RUN go get software.sslmate.com/src/certspotter/cmd/certspotter                                                                                        
-RUN go get -u github.com/tomnomnom/anew                                                                                                                
+RUN go get -u github.com/tomnomnom/anew    
+RUN go install github.com/OJ/gobuster/v3@latest
+
+
                                                                                                                                                                                              
 WORKDIR /go/bin                                                                                                                                        
 RUN cd /go/bin                                                                                                                                         
