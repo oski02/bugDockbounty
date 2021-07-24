@@ -38,6 +38,8 @@ RUN go get -u github.com/tomnomnom/meg
 RUN go get software.sslmate.com/src/certspotter/cmd/certspotter                                                                                        
 RUN go get -u github.com/tomnomnom/anew    
 RUN go install github.com/OJ/gobuster/v3@latest
+RUN GO111MODULE=on go get -v github.com/projectdiscovery/dnsx/cmd/dnsx
+
 
 
                                                                                                                                                                                              
