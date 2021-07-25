@@ -11,8 +11,12 @@ export PS1="\[\e[31m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\\[\e[
 
 
 help(){
+echo "# RECON\n"
 echo "subfinder -silent -d hackerone.com | dnsx"
-
+echo "\n"
+echo "# VULNS\n"
+echo "cat domains | fff -s 200 -S -o roots"
+echo "cd roots; gf XXX"
 }
 
 # by nahamsec: https://raw.githubusercontent.com/nahamsec/recon_profile/master/.bash_profile
