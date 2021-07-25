@@ -12,6 +12,10 @@ export PS1="\[\e[31m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\\[\e[
 
 help(){
 echo "# RECON\n"
+echo "Ej# 1"
+echo "echo "aol.com" | assetfinder -subs-only | anew domains"
+echo "cat domains | httpx -status-code -stats -mc 200 -title | anew alive"
+echo "Ej# 2"
 echo "subfinder -silent -d hackerone.com | dnsx"
 echo "\n"
 echo "# VULNS\n"
